@@ -6,7 +6,7 @@ body {
     position: absolute;
     top: 143px;
     left: 233px;
-    animation: fall 4s ease-out;
+    animation: fall 4s infinite;
     animation-delay: 1s;
     animation-fill-mode: forwards;
   }
