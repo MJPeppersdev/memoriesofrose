@@ -1,0 +1,27 @@
+body {
+    background-color: #d2ddd6;
+  }
+  
+  .falling-leaf {
+    position: absolute;
+    top: 143px;
+    left: 233px;
+    animation: fall 4s ease-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: 143px;
+      left: 233px;
+    }
+    40% {
+      left: 270px;
+    }
+    100% {
+      top: 729px;
+      left: 230px;
+      transform: rotate(150deg);
+    }
+  }
