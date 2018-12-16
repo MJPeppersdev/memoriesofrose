@@ -1,27 +1,120 @@
-body {
-    background-color: #d2ddd6;
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container{
+  overflow: hidden;
+}
+
+.sidebar {
+  height: 100%;
+  padding: 20px;
+}
+
+.content {
+  height: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 40em) {
+  .sidebar {
+    float: left;
+    width: 25%;
   }
-  
-  .falling-leaf {
-    position: absolute;
-    top: 143px;
-    left: 233px;
-    animation: fall 4s infinite;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+  .content {
+    float: left;
+    width: 75%;
   }
-  
+}
+
+.content h1 {
+  top: 0px;
+  right: 500px;
+  font-size: 4.2em;
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 rgb(8, 8, 8), 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 3.1em;
+  font-family: 'Dancing Script', cursive;
+  color: #ff6cb1;
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #0e0e0e, 0 12px 0 #000000, 0 13px 0 #a7a7a7, 0 14px 0 #d4d4d4, 0 15px 0 #ffffff, 0 22px 30px rgba(5, 5, 5, 0.9);
+  text-align: center;
+}
+
+.content h5 {
+  font-size: 2.4em;
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 rgb(8, 8, 8), 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.falling-leaf {
+  position: fixed;
+  top: 0px;
+  left: 150px;
+  animation: fall 6s infinite ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  }
+
   @keyframes fall {
     0% {
-      top: 143px;
-      left: 233px;
+      top: 150px;
+      left: 400px;
     }
     40% {
-      left: 270px;
+      left: 500px;
     }
     100% {
-      top: 729px;
-      left: 230px;
+      top: 775px;
+      left: 500px;
       transform: rotate(150deg);
     }
   }
+  
+  @media screen and (min-width:600px) {
+    @keyframes fall{
+      0% {
+        top: 50px;
+        left: 150px;
+      }
+      40% {
+        left: 250px;
+      }
+      100% {
+        top: 600px;
+        left: 500px;
+        transform: rotate(150deg);
+      }
+    }
+  }
+  
+
+.img-circle {
+  border-radius: 78%;
+  max-width: 100%;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.avatar img {
+  max-width: 100%;
+}
