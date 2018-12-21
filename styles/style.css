@@ -1,3 +1,6 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+
 *{
   box-sizing: border-box;
 }
@@ -6,34 +9,11 @@ body{
   margin: 0;
   padding: 0;
   text-align: center;
+  letter-spacing: .1em;
 }
 
-.container{
-  overflow: hidden;
-}
 
-.sidebar {
-  height: 100%;
-  padding: 20px;
-}
-
-.content {
-  height: 100%;
-  padding: 20px;
-}
-
-@media (min-width: 40em) {
-  .sidebar {
-    float: left;
-    width: 25%;
-  }
-  .content {
-    float: left;
-    width: 75%;
-  }
-}
-
-.content h1 {
+.jumbotron  h1 {
   top: 0px;
   right: 500px;
   font-size: 4.2em;
@@ -44,8 +24,13 @@ body{
   text-align: center;
 }
 
-.content h2 {
-  font-size: 3.1em;
+.jumbotron p {
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+.rose h2 {
+  font-size: 3.2em;
   font-family: 'Dancing Script', cursive;
   color: #ff6cb1;
   letter-spacing: .1em;
@@ -53,7 +38,7 @@ body{
   text-align: center;
 }
 
-.content h5 {
+.jumbotron h5 {
   font-size: 2.4em;
   font-family: 'Dancing Script', cursive;
   color: #ffffff;
@@ -62,10 +47,15 @@ body{
   text-align: center;
 }
 
-.falling-leaf {
-  position: fixed;
+.rose-img {
   top: 0px;
-  left: 150px;
+  margin: auto;
+  padding: auto;
+}
+.falling-leaf {
+  position: absolute;
+  top: 80px;
+  left: 1px;
   animation: fall 6s infinite ease-in-out;
   animation-delay: 1s;
   animation-fill-mode: forwards;
@@ -73,39 +63,21 @@ body{
 
   @keyframes fall {
     0% {
-      top: 150px;
-      left: 400px;
+      top: 80px;
+      left: 1px;
     }
     40% {
-      left: 500px;
+      left: 55px;
     }
     100% {
-      top: 775px;
-      left: 500px;
+      top: 12px;
+      left: 65px;
       transform: rotate(150deg);
     }
   }
-  
-  @media screen and (min-width:600px) {
-    @keyframes fall{
-      0% {
-        top: 50px;
-        left: 150px;
-      }
-      40% {
-        left: 250px;
-      }
-      100% {
-        top: 600px;
-        left: 500px;
-        transform: rotate(150deg);
-      }
-    }
-  }
-  
 
 .img-circle {
-  border-radius: 78%;
+  border-radius: 50%;
   max-width: 100%;
 }
 
@@ -117,4 +89,48 @@ body{
 
 .avatar img {
   max-width: 100%;
+}
+
+.centered h2 {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+hr.style8 {
+	border-top: 1px solid #8c8b8b;
+	border-bottom: 1px solid #fff;
+}
+hr.style8:after {
+	content: '';
+	display: block;
+	margin-top: 2px;
+	border-top: 1px solid #8c8b8b;
+	border-bottom: 1px solid #fff;
+}
+
+.shine {
+  height: 20px;
+  width: 60%;
+  background-image: radial-gradient(
+    farthest-side at 50% -50%,
+    hsla(0, 0%, 0%, 0.5),
+    hsla(0, 0%, 0%, 0));
+  position: relative; 
+}
+
+.shine::before {
+  height: 1px;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(
+    90deg,
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0.75) 50%,
+    hsla(0, 0%, 0%, 0));
 }
